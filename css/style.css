@@ -1,0 +1,169 @@
+/* Font variables declarations */
+@font-face {
+  font-family: "roboto-condensed";
+  src: url("../fonts/roboto-condensed-v18-latin-regular.woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* General Variables */
+
+:root {
+  --roboto-condensed: "roboto-condensed", sans-serif;
+  --arial-helvetica: Arial, Helvetica, sans-serif;
+  --color-light-orange: #f72210;
+  --title140: 2.5rem; /* 40px */
+  --title32: 2rem; /* 32px */
+  --title28: 1.75rem; /* 28px */
+  --title24: 1.5rem; /* 24px */
+  --title20: 1.25rem; /* 20px */
+  --title16: 1rem; /* 16px */
+  --title17: 1.063rem; /* 17px */
+  --title15: 0.938rem; /* 15px */
+  --title21: 1.313rem; /* 21px */
+  --title18: 1.125rem; /* 18px */
+  --title14: 0.875rem; /* 14px */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: rgba(3, 3, 3, 0.4);
+  --color-gray-2: rgba(3, 3, 3, 0.5);
+  --color-gray-3: #555;
+}
+
+div {
+  border: 1px solid #000;
+}
+
+.font1 {
+  font-size: var(--title21);
+  background-color: var(--color-light-orange);
+}
+
+.font2 {
+  font-size: var(--title18);
+  font-family: var(--roboto-condensed);
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-light-orange);
+  font-weight: bold;
+}
+
+.font3 {
+  font-size: var(--title16);
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-light-orange);
+  color: var(--color-white);
+}
+
+.font4 {
+  font-size: var(--title21);
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-light-orange);
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.font5 {
+  font-size: var(--title18);
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-white);
+  color: var(--color-light-orange);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.font6 {
+  font-size: var(--title16);
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-white);
+  color: var(--color-gray);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.font7 {
+  font-size: var(--title17);
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-white);
+  color: var(--color-light-orange);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.font8 {
+  font-size: var(--title24);
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-white);
+  color: var(--color-black); 
+  font-weight: bold;
+}
+
+.font9 {
+  font-size: var(--title15);
+  font-family: var(--arial-helvetica);
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.font10 {
+  font-size: var(--title16);
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-white);
+  color: var(--color-gray-2);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.font11 {
+  font-size: var(--title17);
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.font12 {
+  font-size: var(--title14);
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-white);
+  color: var(--color-gray-3);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bg-header {
+  background-color: var(--color-light-orange);
+  color: var(--color-white);
+  height: 95px;
+  padding: 20px 10px 15px;
+}
+
+.bg-header p {
+  margin-bottom: 0;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo svg {
+  color: var(--color-white);
+  fill: var(--color-white);
+  width: 396px;
+  height: 60px;
+}
+
+.bg-suscribe {
+  text-align: right;
+}
+
+.bg-suscribe a {
+  padding: 0 8px;
+}
+
+.bg-suscribe svg {
+  width: 10px;
+  fill: var(--color-light-orange);
+  color: var(--color-light-orange);
+  padding: 0 0 0 0;
+}
