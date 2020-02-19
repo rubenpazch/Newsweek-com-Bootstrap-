@@ -6,37 +6,50 @@
   font-weight: 500;
 }
 
+@font-face {
+  font-family: "lora";
+  src: url("../fonts/lora-v14-latin-regular.woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "helveticaneue";
+  src: url("../fonts/helveticaneuev2.woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
 /* General Variables */
 
 :root {
   --roboto-condensed: "roboto-condensed", sans-serif;
+  --lora: "lora", sans-serif;
   --arial-helvetica: Arial, Helvetica, sans-serif;
+  --helvetica-neue: "helveticaneue", sans-serif;
   --color-light-orange: #f72210;
-  --title140: 2.5rem; /* 40px */
-  --title32: 2rem; /* 32px */
-  --title28: 1.75rem; /* 28px */
-  --title24: 1.5rem; /* 24px */
-  --title20: 1.25rem; /* 20px */
-  --title16: 1rem; /* 16px */
-  --title17: 1.063rem; /* 17px */
-  --title15: 0.938rem; /* 15px */
-  --title21: 1.313rem; /* 21px */
-  --title18: 1.125rem; /* 18px */
-  --title14: 0.875rem; /* 14px */
   --color-white: #fff;
   --color-black: #000;
   --color-gray: rgba(3, 3, 3, 0.4);
-  --color-gray-2: rgba(3, 3, 3, 0.5);
+  --color-gray-2: rgba(3, 3, 3, 0.5);  
   --color-gray-3: #555;
+  --color-gray-4: rgba(39, 39, 39, 0.5);
+  --color-gray-dark: #272727;
+  --color-gray-light: #e6e6e6;
+  --color-blue: #3581f4;
+}
+
+body {
+  background-color: #f4f5f6;
 }
 
 .font1 {
-  font-size: var(--title21);
+  font-size: 21px;
   background-color: var(--color-light-orange);
 }
 
 .font2 {
-  font-size: var(--title18);
+  font-size: 18px;
   font-family: var(--roboto-condensed);
   text-transform: uppercase;
   color: var(--color-white);
@@ -45,21 +58,21 @@
 }
 
 .font3 {
-  font-size: var(--title16);
+  font-size: 16px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-light-orange);
   color: var(--color-white);
 }
 
 .font4 {
-  font-size: var(--title21);
+  font-size: 21px;
   font-family: var(--roboto-condensed);
   color: var(--color-black);
   font-weight: bold;
 }
 
 .font5 {
-  font-size: var(--title18);
+  font-size: 18px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-white);
   color: var(--color-light-orange);
@@ -69,7 +82,7 @@
 }
 
 .font6 {
-  font-size: var(--title16);
+  font-size: 16px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-white);
   color: var(--color-gray);
@@ -78,7 +91,7 @@
 }
 
 .font7 {
-  font-size: var(--title17);
+  font-size: 17px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-white);
   color: var(--color-light-orange);
@@ -86,16 +99,24 @@
   font-weight: bold;
 }
 
+.font7-black {
+  font-size: 17px;
+  font-family: var(--roboto-condensed);
+  color: var(--color-black);
+  text-transform: capitalize;
+  font-weight: bold;  
+}
+
 .font8 {
-  font-size: var(--title24);
+  font-size: 24px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-white);
-  color: var(--color-black); 
+  color: var(--color-black);
   font-weight: bold;
 }
 
 .font9 {
-  font-size: var(--title15);
+  font-size: 15px;
   font-family: var(--arial-helvetica);
   background-color: var(--color-white);
   color: var(--color-black);
@@ -103,7 +124,7 @@
 }
 
 .font10 {
-  font-size: var(--title16);
+  font-size: 16px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-white);
   color: var(--color-gray-2);
@@ -112,7 +133,7 @@
 }
 
 .font11 {
-  font-size: var(--title17);
+  font-size: 17px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-white);
   color: var(--color-black);
@@ -120,10 +141,52 @@
 }
 
 .font12 {
-  font-size: var(--title14);
+  font-size: 14px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-white);
   color: var(--color-gray-3);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.font13 {
+  font-size: 13px;
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-white);
+  color: var(--color-gray-3);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.font-lora-20 {
+  font-size: 20px;
+  font-family: var(--lora);
+  background-color: var(--color-white);
+  color: var(--color-gray-dark);
+  text-transform: inherit;
+  line-height: 22px;
+}
+
+.font-helvetica-neue-15 {
+  font-size: 15px;
+  font-family: var(--helvetica-neue), Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: var(--color-gray-4);
+  line-height: 20px;
+}
+
+.font-helvetica-neue-13 {
+  font-size: 13px;
+  font-family: var(--helvetica-neue), Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: var(--color-gray-dark);
+  line-height: 20px;
+}
+
+.font-roboto-17-bold {
+  font-size: 17px;
+  font-family: var(--roboto-condensed);
+  color: var(--color-blue);
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -184,6 +247,60 @@
   width: 7rem;
 }
 
+.opinion-container li {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.lanscape-menu a {
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+.bg-header a {
+  text-decoration: none;
+}
+
+.links1 {
+  color: var(--color-black);
+}
+
+.links2 {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.links3 {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.links1:hover {
+  color: var(--color-black);
+  text-decoration: underline var(--color-light-orange);
+}
+
+.links2:hover {
+  text-decoration: none;
+  color: var(--color-light-orange);
+}
+
+.links3:hover {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.lanscape-menu a:hover {
+  color: var(--color-light-orange);
+  text-decoration: none;
+}
+
+.bg-header a:hover {
+  text-decoration: none;
+  color: var(--color-light-orange);
+}
+
 .lanscape-menu li:nth-child(1) {
   width: 5rem;
 }
@@ -220,25 +337,6 @@
   border-right: 0;
 }
 
-.lanscape-menu a {
-  color: var(--color-black);
-  white-space: nowrap;
-}
-
-.bg-header a {
-  text-decoration: none;
-}
-
-.lanscape-menu a:hover {
-  color: var(--color-light-orange);
-  text-decoration: none;
-}
-
-.bg-header a:hover {
-  text-decoration: none;
-  color: var(--color-light-orange);
-}
-
 .lanscape-menu li:first-child a {
   padding-left: 0;
 }
@@ -248,6 +346,22 @@
   border-right: 0;
 }
 
+.opinion-container li:first-child {
+  border-top: 0;
+}
+
+.link-img-opi {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.link-img-block {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
 .search-icon {
   background-image: url(../img/icon-search-glass.svg);
   background-position: center;
@@ -255,7 +369,7 @@
   height: 55px;
   min-width: 40px;
   display: block;
-  background-size: 20px;  
+  background-size: 20px;
 }
 
 .split-top {
@@ -288,16 +402,7 @@
   width: 14%;
 }
 
-.links1 {
-  color: var(--color-black);
-}
-
-.links1:hover {
-  color: var(--color-black);
-  text-decoration: underline var(--color-light-orange);
-}
-
-.img-general {
+.img-g-featured {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -307,7 +412,7 @@
   padding-bottom: 5px;
 }
 
-.img-general-cover {
+.img-g-fea-cover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -317,12 +422,77 @@
   padding-bottom: 5px;
 }
 
-.img-path1 {
+.img-path-fea-1 {
   background-image: url(../img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg);
+}
+
+.img-path-top-1 {
+  background-image: url(../img/china-coronavirus-covid-19-2019ncov.webp);
+}
+
+.img-path-cult-1 {
+  background-image: url(../img/china-coronavirus-covid-19-2019ncov.webp);
+}
+
+.img-g-opinion {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 20%;
+  height: 60px;
+  padding-bottom: 5px;
+}
+
+.img-g-culture {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 100%;
+  height: 160px;
+  padding-bottom: 5px;
+}
+
+.img-g-latest-news {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 65%;
+  padding-bottom: 5px;
+}
+
+.img-g-more-stories {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 33%;
+  height: 107px;
+  padding-bottom: 5px;
+}
+
+.img-path-opi-1 {
+  background-image: url(../img/stefan-simanowitz.png);
+}
+
+.img-path-latnews-1 {
+  background-image: url(../img/amari-cooper.webp);
+}
+
+.img-path-morestor-1 {
+  background-image: url(../img/amari-cooper.webp);
+}
+
+.text-opinion-item {
+  width: 80%;
+  padding-left: 10px;
 }
 
 .featured-stories {
   padding: 0 0 0 0;
+  width: 100%;
 }
 
 .title1 {
@@ -353,6 +523,22 @@
   padding: 0 10px 0 10px;
 }
 
+.opinion-container {
+  padding-left: 0;
+}
+
+.culture-articles-container {
+  padding: 0 0 0 0;
+}
+
+.photo-custom {
+  width: 50%;
+}
+
+.sponsor-article {
+  border: 1px solid var(--color-gray-light);
+}
+
 @media (max-width: 991px) {
   .logo {
     padding: 0 0 0 0;
@@ -374,5 +560,15 @@
     text-align: right;
     top: -8px;
     right: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .photo-custom {
+    width: 100%;
+  }
+
+  .img-g-culture {
+    height: 438px;
   }
 }
