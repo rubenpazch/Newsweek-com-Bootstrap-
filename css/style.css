@@ -31,16 +31,34 @@
   --color-white: #fff;
   --color-black: #000;
   --color-gray: rgba(3, 3, 3, 0.4);
-  --color-gray-2: rgba(3, 3, 3, 0.5);  
-  --color-gray-3: #555;
+  --color-gray-2: rgba(3, 3, 3, 0.5);
+  --color-gray-3: #555;  
   --color-gray-4: rgba(39, 39, 39, 0.5);
   --color-gray-dark: #272727;
   --color-gray-light: #e6e6e6;
   --color-blue: #3581f4;
+  --color-gray-5: #f4f5f6;
+  --color-gray-6: #dbdcdd;
+  --color-gray-7: #333;
 }
 
 body {
   background-color: #f4f5f6;
+}
+
+.max-width-cont {
+  max-width: 1310px;
+}
+
+.max-width-cont-white {
+  max-width: 1310px;
+  background-color: var(--color-white);
+}
+
+.max-width-cont-white-border {
+  max-width: 1310px;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-gray-light);
 }
 
 .font1 {
@@ -57,11 +75,28 @@ body {
   font-weight: bold;
 }
 
-.font3 {
+.font-roboto-16-normal {
   font-size: 16px;
   font-family: var(--roboto-condensed);
-  background-color: var(--color-light-orange);
   color: var(--color-white);
+}
+
+.font-roboto-16-bold {
+  font-size: 16px;
+  font-family: var(--roboto-condensed);
+  color: var(--color-white);
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.font-roboto-16-bold-orange {
+  font-size: 16px;
+  font-family: var(--roboto-condensed);
+  color: var(--color-light-orange);
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
 }
 
 .font4 {
@@ -81,16 +116,15 @@ body {
   letter-spacing: 1px;
 }
 
-.font6 {
+.font-roboto-16-bold-gray {
   font-size: 16px;
   font-family: var(--roboto-condensed);
-  background-color: var(--color-white);
   color: var(--color-gray);
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.font7 {
+.font-roboto-17-bold-upper-white {
   font-size: 17px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-white);
@@ -99,15 +133,15 @@ body {
   font-weight: bold;
 }
 
-.font7-black {
+.font-roboto-17-bold-upper-black {
   font-size: 17px;
   font-family: var(--roboto-condensed);
   color: var(--color-black);
   text-transform: capitalize;
-  font-weight: bold;  
+  font-weight: bold;
 }
 
-.font8 {
+.font-roboto-24-bold {
   font-size: 24px;
   font-family: var(--roboto-condensed);
   background-color: var(--color-white);
@@ -115,11 +149,19 @@ body {
   font-weight: bold;
 }
 
-.font9 {
+.font-roboto-22-bold {
+  font-size: 22px;
+  font-family: var(--roboto-condensed);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.font-helvetica-15-normal-gray {
   font-size: 15px;
   font-family: var(--arial-helvetica);
   background-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-gray-7);
   line-height: 20px;
 }
 
@@ -161,7 +203,6 @@ body {
 .font-lora-20 {
   font-size: 20px;
   font-family: var(--lora);
-  background-color: var(--color-white);
   color: var(--color-gray-dark);
   text-transform: inherit;
   line-height: 22px;
@@ -189,6 +230,41 @@ body {
   color: var(--color-blue);
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.font-roboto-17-bold-blue {
+  font-size: 17px;
+  font-family: var(--roboto-condensed);
+  color: var(--color-blue);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.font-roboto-18-bold {
+  font-size: 18px;
+  font-family: var(--roboto-condensed);
+  color: var(--color-black);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.font-roboto-20-bold {
+  font-size: 20px;
+  font-family: var(--roboto-condensed);
+  color: var(--color-black);
+  text-transform: inherit;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.font-roboto-20-bold-orange {
+  font-size: 20px;
+  font-family: var(--roboto-condensed);
+  color: var(--color-light-orange);
+  text-transform: inherit;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .bg-header {
@@ -262,6 +338,136 @@ body {
   text-decoration: none;
 }
 
+.featured-stories {
+  padding: 0 0 0 0;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.title1 {
+  padding-top: 10px;
+}
+
+.label-article {
+  position: relative;
+}
+
+.label-article-cover {
+  position: relative;
+}
+
+.label-article-link {
+  position: absolute;
+  bottom: -220px;
+  left: 0;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 10px 0 10px;
+}
+
+.label-sponsor-link {
+  position: absolute;
+  bottom: -220px;
+  left: 0;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 10px 0 10px;
+}
+
+.label-article-link-big {
+  position: absolute;
+  bottom: -280px;
+  left: 0;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 10px 0 10px;
+}
+
+.label-article-link-cover {
+  position: absolute;
+  bottom: 145px;
+  left: 0;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 10px 0 10px;
+}
+
+.label-article-link-feat {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 10px 0 10px;
+}
+
+.cover-container-art {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.opinion-container {
+  padding-left: 0;
+}
+
+.culture-articles-container {
+  padding: 0 0 0 0;
+}
+
+.photo-custom {
+  width: 50%;
+}
+
+.sponsor-article {
+  border: 1px solid var(--color-gray-light);
+}
+
+.sponsor-article p {
+  padding: 0 15px;
+  margin-left: 1px;
+}
+
+.sponsor-article h2 {
+  padding: 0 15px;
+  padding-top: 15px;
+  margin-left: 1px;
+}
+
+.icon-title {
+  display: block;
+  width: 29px;
+  height: 28px;
+  background: url(../img/logo-n1.svg) center/contain no-repeat #f72210;
+  margin-right: 10px;
+}
+
+.text-see-all-fea {
+  background-color: var(--color-gray-5);
+  display: block;
+  padding: 5px 55px;
+}
+
+.text-see-all-fea:hover {
+  background-color: var(--color-gray-6);
+}
+
+.label-magz-cover {
+  background-color: var(--color-light-orange);
+  padding: 0 5px 0 5px;
+}
+
+.counter-editor-label {
+  position: absolute;
+  left: 28px;
+  top: 15px;
+}
+
 .links1 {
   color: var(--color-black);
 }
@@ -274,6 +480,12 @@ body {
 .links3 {
   text-decoration: none;
   color: var(--color-black);
+}
+
+.link-in-mgz {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
 }
 
 .links1:hover {
@@ -299,6 +511,17 @@ body {
 .bg-header a:hover {
   text-decoration: none;
   color: var(--color-light-orange);
+}
+
+.label-article-link:hover {
+  text-decoration: none;
+  color: var(--color-light-orange);
+}
+
+.label-sponsor-link:hover {
+  text-decoration: none;
+  color: var(--color-blue);
+  cursor: text;
 }
 
 .lanscape-menu li:nth-child(1) {
@@ -373,9 +596,9 @@ body {
 }
 
 .split-top {
-  background-color: #f72210;
-  border-left: 12px solid white;
-  border-top: 13px solid #f72210;
+  background-color: var(--color-light-orange);
+  border-left: 12px solid var(--color-white);
+  border-top: 13px solid var(--color-light-orange);
   display: block;
   width: 66px;
   position: absolute;
@@ -402,24 +625,64 @@ body {
   width: 14%;
 }
 
-.img-g-featured {
+.img-g {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
-  width: 100%;
-  height: 220px;
   padding-bottom: 5px;
 }
 
-.img-g-fea-cover {
+.img-g-small {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   display: block;
-  width: 100%;
-  height: 280px;
   padding-bottom: 5px;
+}
+
+.img-g-featured {
+  width: 100%;
+  height: 220px;
+}
+
+.img-g-fea-cover {
+  width: 100%;
+  height: 100%;
+}
+
+.img-g-opinion {
+  width: 20%;
+  height: 60px;
+}
+
+.img-g-culture {
+  width: 100%;
+  height: 160px;
+}
+
+.img-g-latest-news {
+  width: 65%;
+}
+
+.img-g-all-features {
+  width: 100%;
+  height: 370px;
+}
+
+.img-g-more-stories {
+  width: 33%;
+  height: 107px;
+}
+
+.img-g-in-the-magz {
+  width: 100%;
+  height: 270px;
+}
+
+.img-g-feat-slide {
+  width: 16%;
+  height: 50px;
 }
 
 .img-path-fea-1 {
@@ -434,43 +697,13 @@ body {
   background-image: url(../img/china-coronavirus-covid-19-2019ncov.webp);
 }
 
-.img-g-opinion {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  width: 20%;
-  height: 60px;
-  padding-bottom: 5px;
+.title-section-1 {
+  padding: 15px 15px 15px 15px;
 }
 
-.img-g-culture {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  width: 100%;
-  height: 160px;
-  padding-bottom: 5px;
-}
-
-.img-g-latest-news {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  width: 65%;
-  padding-bottom: 5px;
-}
-
-.img-g-more-stories {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  width: 33%;
-  height: 107px;
-  padding-bottom: 5px;
+.border-botton-title-1 {
+  border-bottom: 1px solid var(--color-gray-light);
+  padding: 0 0 12px 0;
 }
 
 .img-path-opi-1 {
@@ -485,58 +718,21 @@ body {
   background-image: url(../img/amari-cooper.webp);
 }
 
+.img-path-allfeatures-1 {
+  background-image: url(../img/february-21-28-2020-cover.jpg);
+}
+
+.img-path-in-the-magz-1 {
+  background-image: url(../img/fea-growth-01.jpg);
+}
+
+.img-path-feat-slide-1 {
+  background-image: url(../img/icon-slideshows-nw.png);
+}
+
 .text-opinion-item {
   width: 80%;
   padding-left: 10px;
-}
-
-.featured-stories {
-  padding: 0 0 0 0;
-  width: 100%;
-}
-
-.title1 {
-  padding-top: 10px;
-}
-
-.label-article {
-  position: relative;
-}
-
-.label-article-link {
-  position: absolute;
-  bottom: -220px;
-  left: 0;
-  line-height: 2rem;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 0 10px 0 10px;
-}
-
-.label-article-link-big {
-  position: absolute;
-  bottom: -280px;
-  left: 0;
-  line-height: 2rem;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 0 10px 0 10px;
-}
-
-.opinion-container {
-  padding-left: 0;
-}
-
-.culture-articles-container {
-  padding: 0 0 0 0;
-}
-
-.photo-custom {
-  width: 50%;
-}
-
-.sponsor-article {
-  border: 1px solid var(--color-gray-light);
 }
 
 @media (max-width: 991px) {
