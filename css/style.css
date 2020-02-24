@@ -169,6 +169,7 @@ body {
   font-family: var(--arial-helvetica);
   color: var(--color-gray-7);
   line-height: 20px;
+  text-align: left;
 }
 
 .font-helvetica-12-normal-gray {
@@ -403,8 +404,20 @@ body {
 
 .opinion-container li {
   border-top: 1px solid #ddd;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  list-style: none;
+  line-height: 20px;
+}
+
+.latest-news-container li {
+  border-top: 1px solid #ddd;
+  list-style: none;
+  line-height: 20px;
+}
+
+.more-stories-container li {
+  border-top: 1px solid #ddd;
+  list-style: none;
+  line-height: 20px;
 }
 
 .lanscape-menu a {
@@ -421,9 +434,23 @@ body {
 }
 
 .featured-stories {
-  padding: 0 0 0 0;
   width: 100%;
-  padding-top: 15px;
+}
+
+.top-story {
+  width: 100%;
+}
+
+.opinion {
+  width: 100%;
+}
+
+.latest-news {
+  width: 100%;
+}
+
+.more-stories {
+  width: 100%;
 }
 
 .title1 {
@@ -488,13 +515,21 @@ body {
   padding: 0 10px 0 10px;
 }
 
+.issue-newsletter {
+  bottom: 45px;
+  left: 0;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 .cover-container-art {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-.opinion-container {
+.more-stories-container {
   padding-left: 0;
 }
 
@@ -547,7 +582,14 @@ body {
 .text-see-all-fea {
   background-color: var(--color-gray-5);
   display: block;
-  padding: 5px 55px;
+  min-width: 100%;
+  text-align: center;
+}
+
+.text-see-all-fea svg {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
 }
 
 .text-see-all-fea:hover {
@@ -577,12 +619,6 @@ body {
 .links3 {
   text-decoration: none;
   color: var(--color-black);
-}
-
-.link-in-mgz {
-  margin: 0;
-  padding: 0;
-  padding-top: 5px;
 }
 
 .links1:hover {
@@ -675,10 +711,22 @@ body {
   border-top: 0;
 }
 
+.latest-news-container li:first-child {
+  border-top: 0;
+}
+
 .link-img-opi {
   display: block;
   height: 100%;
   width: 100%;
+}
+
+.link-img-latest-news img {
+  width: 135px;
+}
+
+.link-img-more-stories {
+  width: 135px;
 }
 
 .link-img-block {
@@ -735,12 +783,19 @@ body {
   padding-bottom: 5px;
 }
 
+.img-g-contain {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  padding-bottom: 5px;
+}
+
 .img-g-small {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
-  padding-bottom: 5px;
 }
 
 .img-g-featured {
@@ -756,6 +811,8 @@ body {
 .img-g-opinion {
   width: 20%;
   height: 60px;
+  min-width: 63px;
+  min-height: 63px;
 }
 
 .img-g-culture {
@@ -769,17 +826,13 @@ body {
 
 .img-g-all-features {
   width: 100%;
-  height: 370px;
+  height: 355px;
+  display: block;
 }
 
 .img-g-more-stories {
   width: 33%;
   height: 107px;
-}
-
-.img-g-in-the-magz {
-  width: 100%;
-  height: 270px;
 }
 
 .img-g-feat-slide {
@@ -825,6 +878,10 @@ body {
   background-image: url(../img/stefan-simanowitz.png);
 }
 
+.img-path-opi-2 {
+  background-image: url(../img/rand-paul.webp);
+}
+
 .img-path-latnews-1 {
   background-image: url(../img/amari-cooper.webp);
 }
@@ -841,13 +898,16 @@ body {
   background-image: url(../img/fea-growth-01.jpg);
 }
 
-.img-path-feat-slide-1 {
-  background-image: url(../img/icon-slideshows-nw.png);
+.img-path-in-the-magz-2 {
+  background-image: url(../img/fea-growth-01.webp);
 }
 
-.text-opinion-item {
-  width: 80%;
-  padding-left: 10px;
+.img-path-in-the-magz-3 {
+  background-image: url(../img/fe-presidential-names-01.jpg);
+}
+
+.img-path-feat-slide-1 {
+  background-image: url(../img/icon-slideshows-nw.png);
 }
 
 .label-culture-1 {
@@ -956,6 +1016,10 @@ body {
   display: none;
 }
 
+.img-g-in-the-magz {
+  min-height: 255px;
+}
+
 @media (max-width: 991px) {
   .logo {
     padding: 0 0 0 0;
@@ -1034,6 +1098,14 @@ body {
   #menu-bars-1 {
     display: inherit;
   }
+
+  .img-path-in-the-magz-2 {
+    background-image: url(../img/fea-growth-02.webp);
+  }
+
+  .img-g-in-the-magz {
+    min-height: 190px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1069,10 +1141,6 @@ body {
 
   .sponsor-article-s-opinion {
     width: 100%;
-  }
-
-  .img-g-in-the-magz {
-    height: 475px;
   }
 
   .img-g-featured {
@@ -1131,15 +1199,26 @@ body {
   .logo-footer svg {
     width: 13rem;
   }
-}
 
-@media (max-width: 767px) {
+  .link-img-latest-news img {
+    width: 258px;
+  }
+
   .sing-in-custom {
     min-width: 80px;
   }
 
   .suscribe-custom {
     min-width: 130px;
+  }
+
+  .img-path-in-the-magz-2 {
+    background-image: url(../img/fea-growth-03.webp);
+  }
+
+  .img-g-in-the-magz {
+    max-height: 200px;
+    min-height: 400px;
   }
 }
 
@@ -1184,5 +1263,13 @@ body {
 
   .suscribe-custom {
     min-width: 72px;
+  }
+
+  .link-img-more-stories img {
+    width: 135px;
+  }
+
+  .link-img-latest-news img {
+    width: 135px;
   }
 }
