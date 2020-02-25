@@ -45,6 +45,7 @@
 
 body {
   background-color: #f4f5f6;
+  overflow-x: hidden;
 }
 
 .max-width-cont {
