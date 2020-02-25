@@ -1085,4 +1085,18 @@ body {
   .link-img-latest-news img {
     width: 135px;
   }
+
+  .other-news-small-link-container img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 287px) {
+  .link-img-latest-news img {
+    width: 90px;
+  }
+
+  .other-news-small-link-container img {
+    width: 140px;
+  }
 }
