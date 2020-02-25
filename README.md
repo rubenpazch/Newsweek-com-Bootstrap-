@@ -10,7 +10,7 @@ This project requests students to build a replica of the news site Newsweek.com 
 
 ## Live Demo
 
-[Preview](#)
+[Preview](https://happy-stonebraker-bc9837.netlify.com/)
 
 
 ## Authors

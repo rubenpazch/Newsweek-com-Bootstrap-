@@ -1,11 +1,1534 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+  <title>News Weeks Clone</title>
 </head>
+
 <body>
-  
+
+  <header class="container-fluid stycki-menu " id="menu-stycki-container">
+    <div class="row bg-headerv2 pt-2 ">
+      <div class="col-4 col-sm-6 col-md-4 col-lg-6 logov2 ">
+        <svg version="1.1" id="Layer_998" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve">
+          <g>
+            <path class="st0"
+              d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div
+        class="col-8 col-sm-6 col-md-8 col-lg-6 bg-suscribev2 d-flex flex-row justify-content-end align-items-center pr-0 text pt-0 text-right">
+        <a href="#" class="font2 sing-in-custom pr-2 pt-1">Sign in</a>
+        <a href="#" class="font5 suscribe-custom pr-4 pl-4 pt-1">Suscribe
+          <svg  version="1.1" id="Layer_99898" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8 14"
+            style="enable-background:new 0 0 8 14;" xml:space="preserve">
+            <g id="arrow-right_x_Y">
+              <defs>
+                <rect id="SVGID_1_X_y" width="8" height="14"></rect>
+              </defs>
+              <clipPath id="SVGID_2_X_Y">
+                <use xlink:href="#SVGID_1_" style="overflow:visible;"></use>
+              </clipPath>
+              <g id="Shape_1_999_7" class="st0">
+                <g>
+                  <polygon class="st1" points="8,7 1.1,0 0,1.1 5.9,7 0,12.9 1.1,14 8,7 8,7	"></polygon>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <a href="#" class="pl-2">
+          <img class="bars-menu-stycki mr-4" src="./img/menu-bars.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <header class="container-fluid max-width-cont  ">
+    <div class="row bg-header align-items-end pt-md-2 pb-lg-3">
+      <div class="d-none d-sm-none d-lg-block col-lg-3">
+        <p class="font-roboto-16-normal pb-0">Mon, Feb 17, 2020</p>
+      </div>
+      <div class="col-4 col-sm-6 col-md-6 col-lg-6 logo text-md-left text-lg-center">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve">
+          <g>
+            <path class="st0"
+              d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="col-8 col-sm-6 col-md-6 col-lg-3 bg-suscribe text-right pr-0">
+        <a href="#" class="font2 py-1 px-2">Sign in</a>
+        <a href="#" class="font5 py-1 px-2">Suscribe
+          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 8 14" style="enable-background:new 0 0 8 14;" xml:space="preserve">
+            <g id="arrow-right">
+              <defs>
+                <rect id="SVGID_1_" width="8" height="14"></rect>
+              </defs>
+              <clipPath id="SVGID_2_">
+                <use xlink:href="#SVGID_1_" style="overflow:visible;"></use>
+              </clipPath>
+              <g id="Shape_1" class="st0">
+                <g>
+                  <polygon class="st1" points="8,7 1.1,0 0,1.1 5.9,7 0,12.9 1.1,14 8,7 8,7	"></polygon>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <a href="#" class="py-1 pr-2">
+          <img class="bars-menu-stycki-main " id="menu-bars-1" src="./img/menu-bars.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="container-fluid max-width-cont-white">
+    <div class="row">
+      <div class="d-none d-sm-none d-lg-block col-lg-12 px-0 ">
+        <div class="d-flex align-items-start">
+          <ul class="d-flex lanscape-menu font4 text-center mr-0 pt-3 pl-0">
+            <li class="px-0"><a href="#"> U.S.</a></li>
+            <li class="px-0"><a href="#"> World</a></li>
+            <li class="px-0"><a href="#"> Business</a></li>
+            <li class="px-0"><a href="#"> Tech & Science</a></li>
+            <li class="px-0"><a href="#"> Culture</a></li>
+            <li class="px-0"><a href="#"> Newsgeek</a></li>
+            <li class="px-0"><a href="#"> Sports</a></li>
+            <li class="px-0"><a href="#"> Health</a></li>
+            <li class="px-0"><a href="#"> The debate</a></li>
+            <li class="px-0"><a href="#"> Vantage</a></li>
+            <li class="px-0"><a href="#"> Weather</a></li>
+          </ul>
+          <div class="d-flex flex-row  align-items-center label-search">
+            <div class="search-text">
+              <span> Search</span>
+            </div>
+            <div class="search-icon"></div>
+            <div>
+              <div class="split-top position-absolute"></div>
+              <div class="split-bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid max-width-cont-white-border">
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-9 ">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-5 order-2 order-md-1 order-lg-1 ">
+            <div class="row">
+              <div class="col-12 ">
+                <section class="featured-stories pt-3">
+                  <h2 class="font-roboto-16-bold-gray">FEATURED STORIES</h2>
+                  <article class="d-flex flex-column align-items-start pb-2 ">
+                    <h2 class="order-2 font-roboto-24-bold pt-3">
+                      <a href="#" class="links1">
+                        New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                      </a>
+                    </h2>
+                    <div class="order-1 cover-container-art">
+                      <a href="#"><img class="img-g-fea-cover"
+                          src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+                      <a href="#"
+                        class="font-roboto-17-bold-upper-white  position-absolute label-article-link label-article-link-feat text-center px-3">HEALTH</a>
+                    </div>
+                    <p class="order-3 font-helvetica-15-normal-gray">There are currently no specific treatments for the
+                      virus, which has killed
+                      almost
+                      2,000 people.</p>
+                  </article>
+                  <article class="d-flex flex-column align-items-start pb-2 ">
+                    <h2 class="order-2 font-roboto-24-bold pt-3">
+                      <a href="#" class="links1">
+                        New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                      </a>
+                    </h2>
+                    <div class="order-1 cover-container-art">
+                      <a href="#"><img class="img-g-fea-cover"
+                          src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+                      <a href="#"
+                        class="font-roboto-17-bold-upper-white  position-absolute label-article-link label-article-link-feat text-center  px-3">HEALTH</a>
+                    </div>
+                    <p class="order-3 font-helvetica-15-normal-gray">There are currently no specific treatments for the
+                      virus, which has killed
+                      almost
+                      2,000 people.</p>
+                  </article>
+                  <article class="d-flex flex-column align-items-start pb-2 ">
+                    <h2 class="order-2 font-roboto-24-bold pt-3">
+                      <a href="#" class="links1">
+                        New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                      </a>
+                    </h2>
+                    <div class="order-1 cover-container-art">
+                      <a href="#"><img class="img-g-fea-cover"
+                          src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+                      <a href="#"
+                        class="font-roboto-17-bold-upper-white  position-absolute label-article-link label-article-link-feat text-center  px-3">HEALTH</a>
+                    </div>
+                    <p class="order-3 font-helvetica-15-normal-gray  px-3">There are currently no specific treatments
+                      for the
+                      virus, which has killed
+                      almost
+                      2,000 people.</p>
+                  </article>
+                </section>
+              </div>
+              <div class="col-12 d-md-flex flex-md-column align-items-md-center">
+
+                <article class="d-flex flex-column align-items-start sponsor-article mt-4 ">
+                  <h2 class="order-2 font-roboto-24-bold pt-3 px-3">
+                    <a href="#" class="links1">
+                      New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                    </a>
+                  </h2>
+                  <div class="order-1 cover-container-art">
+                    <a href="#"><img class="img-g-fea-cover" src="./img/wayne-state-university-college-nursing.jpg"
+                        alt=""></a>
+                    <a href="#"
+                      class="font-roboto-17-bold-blue position-absolute text-center label-sponsor-link label-article-link-feat  px-3">
+                      SPONSORED
+                      INSIGHT</a>
+                  </div>
+                  <p class="order-3 font-helvetica-15-normal-gray  px-3">We’re used to doctors bustling in and out when
+                    in
+                    hospital, but it’s the reassuring presence and professionalism of the nursing staff that we rely on.
+                    What sets the best ones apart?</p>
+                </article>
+                <article class="d-flex flex-column align-items-start sponsor-article mt-4 ">
+                  <h2 class="order-2 font-roboto-24-bold pt-3 px-3">
+                    <a href="#" class="links1">
+                      New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                    </a>
+                  </h2>
+                  <div class="order-1 cover-container-art">
+                    <a href="#"><img class="img-g-fea-cover" src="./img/wayne-state-university-college-nursing.jpg"
+                        alt=""></a>
+                    <a href="#"
+                      class="font-roboto-17-bold-blue  position-absolute text-center label-sponsor-link label-article-link-feat  px-3">
+                      SPONSORED
+                      INSIGHT</a>
+                  </div>
+                  <p class="order-3 font-helvetica-15-normal-gray  px-3">We’re used to doctors bustling in and out when
+                    in
+                    hospital, but it’s the reassuring presence and professionalism of the nursing staff that we rely on.
+                    What sets the best ones apart?</p>
+                </article>
+                <article class="d-flex flex-column align-items-start sponsor-article mt-4 ">
+                  <h2 class="order-2 font-roboto-24-bold pt-3 px-3">
+                    <a href="#" class="links1">
+                      New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                    </a>
+                  </h2>
+                  <div class="order-1 cover-container-art">
+                    <a href="#"><img class="img-g-fea-cover" src="./img/wayne-state-university-college-nursing.jpg"
+                        alt=""></a>
+                    <a href="#"
+                      class="font-roboto-17-bold-blue  position-absolute text-center label-sponsor-link label-article-link-feat  px-3">
+                      SPONSORED
+                      INSIGHT</a>
+                  </div>
+                  <p class="order-3 font-helvetica-15-normal-gray  px-3">We’re used to doctors bustling in and out when
+                    in
+                    hospital, but it’s the reassuring presence and professionalism of the nursing staff that we rely on.
+                    What sets the best ones apart?</p>
+                </article>
+                <article class="d-flex flex-column align-items-start sponsor-article mt-4 ">
+                  <h2 class="order-2 font-roboto-24-bold pt-3 px-3">
+                    <a href="#" class="links1">
+                      New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                    </a>
+                  </h2>
+                  <div class="order-1 cover-container-art">
+                    <a href="#"><img class="img-g-fea-cover" src="./img/wayne-state-university-college-nursing.jpg"
+                        alt=""></a>
+                    <a href="#"
+                      class="font-roboto-17-bold-blue  position-absolute text-center label-sponsor-link label-article-link-feat  px-3">
+                      SPONSORED
+                      INSIGHT</a>
+                  </div>
+                  <p class="order-3 font-helvetica-15-normal-gray  px-3">We’re used to doctors bustling in and out when
+                    in
+                    hospital, but it’s the reassuring presence and professionalism of the nursing staff that we rely on.
+                    What sets the best ones apart?</p>
+                </article>
+                <article class="d-flex flex-column align-items-start sponsor-article mt-4 ">
+                  <h2 class="order-2 font-roboto-24-bold pt-3 px-3">
+                    <a href="#" class="links1">
+                      New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                    </a>
+                  </h2>
+                  <div class="order-1 cover-container-art">
+                    <a href="#"><img class="img-g-fea-cover" src="./img/wayne-state-university-college-nursing.jpg"
+                        alt=""></a>
+                    <a href="#"
+                      class="font-roboto-17-bold-blue  position-absolute text-center label-sponsor-link label-article-link-feat  px-3">
+                      SPONSORED
+                      INSIGHT</a>
+                  </div>
+                  <p class="order-3 font-helvetica-15-normal-gray  px-3">We’re used to doctors bustling in and out when
+                    in
+                    hospital, but it’s the reassuring presence and professionalism of the nursing staff that we rely on.
+                    What sets the best ones apart?</p>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-7 order-1 order-md-2 order-lg-2">
+            <div class="row">
+              <div class="col-12 order-1 order-md-1 order-lg-1">
+                <section class="top-story pt-3">
+                  <h2 class="font-roboto-16-bold-gray">TOP STORY</h2>
+                  <article class="d-flex flex-column align-items-start ">
+                    <header class="order-2">
+                      <h2 class="font-roboto-22-bold pt-3">
+                        <a href="#" class="links1">
+                          Coronavirus Recoveries Overtake New Cases in China for the First Time
+                        </a>
+                      </h2>
+                    </header>
+                    <div class="order-1 cover-container-art">
+                      <a href="#">
+                        <img src="./img/dem-debate-nevada.jpg" alt="" class="img-g-fea-cover">
+                      </a>
+                      <a href="#"
+                        class="font-roboto-17-bold-upper-white position-absolute text-center label-article-link-cover pl-3 pr-3">U.S.</a>
+                    </div>
+                    <p class="order-3 font-helvetica-15-normal-gray">A total of 1,749 new cases of coronavirus were
+                      reported on Tuesday, while
+                      1,824 patients were released from hospital "after being cured," according to China's National
+                      Health Commission.</p>
+                  </article>
+                </section>
+              </div>
+              <div class="col-12 order-3 order-md-2 order-lg-2">
+                <section class="d-flex flex-wrap featured-stories" style="background-color: #f4f5f7;">
+                  <h2 class="font-roboto-16-bold-gray pt-2">culture & travel</h2>
+                  <div
+                    class="d-flex flex-column flex-sm-column flex-md-row justify-content-md-between justify-content-center">
+                    <article class="d-flex flex-column photo-custom pb-3 pr-2 ">
+                      <header class="order-2 pl-2 pr-2  ">
+                        <h2 class="font-lora-20 pt-2 pb-1">
+                          <a href="#" class="links3">Sacred Journeys Around the World</a>
+                        </h2>
+                      </header>
+                      <div class="img-g img-g-culture img-path-cult-1 order-1"><a href="#" class="link-img-block"></a>
+                      </div>
+                      <p class=" font-helvetica-neue-15 order-3  pl-2 pr-2">Escape the crowds on El Camino on these
+                        alternative
+                        pilgrimages around the world. Follow in the footsteps of Buddhist monks in Japan or a revered
+                        Viking king in Scandinavia or seek a shaman's healing in ice-cold lagoons in Peru.</p>
+                      <a href="#" class=" font-helvetica-neue-13 order-4 label-culture-1 text-center ml-2">Travel</a>
+                    </article>
+                    <article class="d-flex flex-column photo-custom pb-3 pl-2 ">
+                      <header class="order-2  pl-2 pr-2">
+                        <h2 class="font-lora-20 pt-2 pb-1">
+                          <a href="#" class="links3">Biggie: The Larger-Than-Life Rap Icon Who Brought Hip-Hop to the
+                            Masses</a>
+                        </h2>
+                      </header>
+                      <div class="img-g img-g-culture img-path-cult-1 order-1"><a href="#" class="link-img-block"></a>
+                      </div>
+                      <p class=" font-helvetica-neue-15 order-3  pl-2 pr-2">Escape the crowds on El Camino on these
+                        alternative
+                        pilgrimages around the world. Follow in the footsteps of Buddhist monks in Japan or a revered
+                        Viking king in Scandinavia or seek a shaman's healing in ice-cold lagoons in Peru.</p>
+                      <a href="#" class=" font-helvetica-neue-13 order-4 label-culture-1 text-center ml-2">Travel</a>
+                    </article>
+                  </div>
+                  <div
+                    class="d-flex flex-column flex-sm-column flex-md-row justify-content-md-between justify-content-center">
+                    <article class="d-flex flex-column photo-custom pb-3 pr-2">
+                      <header class="order-2  pl-2 pr-2">
+                        <h2 class="font-lora-20 pt-2 pb-1">
+                          <a href="#" class="links3">Sacred Journeys Around the World</a>
+                        </h2>
+                      </header>
+                      <div class="img-g img-g-culture img-path-cult-1 order-1"><a href="#" class="link-img-block"></a>
+                      </div>
+                      <p class=" font-helvetica-neue-15 order-3  pl-2 pr-2">Escape the crowds on El Camino on these
+                        alternative
+                        pilgrimages around the world. Follow in the footsteps of Buddhist monks in Japan or a revered
+                        Viking king in Scandinavia or seek a shaman's healing in ice-cold lagoons in Peru.</p>
+                      <a href="#" class=" font-helvetica-neue-13 order-4 label-culture-1 text-center ml-2">Travel</a>
+                    </article>
+                    <article class="d-flex flex-column photo-custom pb-3 pl-2">
+                      <header class="order-2  pl-2 pr-2">
+                        <h2 class="font-lora-20 pt-2 pb-1">
+                          <a href="#" class="links3">40 Must-Read Fiction and Nonfiction Books to Savor This Spring</a>
+                        </h2>
+                      </header>
+                      <div class="img-g img-g-culture img-path-cult-1 order-1"><a href="#" class="link-img-block"></a>
+                      </div>
+                      <p class=" font-helvetica-neue-15 order-3  pl-2 pr-2">Escape the crowds on El Camino on these
+                        alternative
+                        pilgrimages around the world. Follow in the footsteps of Buddhist monks in Japan or a revered
+                        Viking king in Scandinavia or seek a shaman's healing in ice-cold lagoons in Peru.</p>
+                      <a href="#" class=" font-helvetica-neue-13 order-4 label-culture-1 text-center ml-2">Travel</a>
+                    </article>
+                  </div>
+                </section>
+              </div>
+              <div class="col-12 order-2 order-md-3 order-lg-3">
+                <section class="more-stories pt-4">
+                  <h2 class="font-roboto-16-bold-gray">MORE STORIES</h2>
+                  <ul class="more-stories-container pl-0">
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/donald-trump-rally-hat-reelection.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/marianne-williamson.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/robert-obrien.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="pb-3 pb-sm-3 pb-md-0">
+                      <article class="row mt-3 no-gutters">
+                        <div class="col-md-12">
+                          <div class=" float-left pr-3 pb-1">
+                            <a href="#" class="link-img-more-stories">
+                              <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                            </a>
+                          </div>
+                          <h2 class="font-roboto-17-bold-upper-black ">
+                            <a href="#" class="links1">
+                              Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                            </a>
+                          </h2>
+                          <div class="p-0 font-helvetica-15-normal-gray">
+                            <p>
+                              The CBS News/YouGov poll lorem lorem revealed that Republicans are far more confident than
+                              Democrats, with 90 percent of GOP registered voters expecting the president to win
+                              re-election.
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-3">
+        <div class="row">
+          <div class="col-12 ">
+            <section class="opinion pt-3">
+              <h2 class="font-roboto-16-bold-gray">OPINION</h2>
+              <ul class="opinion-container p-0 ">
+                <li class="d-flex flex-row ">
+                  <div class="img-g-small img-g-opinion img-path-opi-1 rounded-circle">
+                    <a href="#" class="link-img-opi"></a>
+                  </div>
+                  <div class="text-opinion-item pl-3 pb-sm-4 pb-md-4 pb-lg-1">
+                    <h2 class="font-roboto-17-bold-upper-black">
+                      <a href="#" class="links2">
+                        My Colleagues' Case Is an Acid Test for Turkey's Justice System
+                      </a>
+                    </h2>
+                    <h3 class="font13">BY STEFAN SIMANOWITZ</h3>
+                  </div>
+                </li>
+                <li class="d-flex flex-row pt-2 ">
+                  <div class="img-g-small img-g-opinion img-path-opi-2 rounded-circle">
+                    <a href="#" class="link-img-opi"></a>
+                  </div>
+                  <div class="text-opinion-item pl-3 pb-sm-4 pb-md-4 pb-lg-1">
+                    <h2 class="font-roboto-17-bold-upper-black">
+                      <a href="#" class="links2">
+                        Dear Donna Rotunno: Your Reckless Words on Sexual Assault Hurt All of Us
+                      </a>
+                    </h2>
+                    <h3 class="font13">BY JOAN COOK AND ANNE P. DEPRINCE</h3>
+                  </div>
+                </li>
+                <li class="d-flex flex-row pt-2 ">
+                  <div class="img-g-small img-g-opinion img-path-opi-1 rounded-circle">
+                    <a href="#" class="link-img-opi"></a>
+                  </div>
+                  <div class="text-opinion-item pl-3 pb-sm-4 pb-md-4 pb-lg-1">
+                    <h2 class="font-roboto-17-bold-upper-black">
+                      <a href="#" class="links2">
+                        Dear Donna Rotunno: Your Reckless Words on Sexual Assault Hurt All of Us
+                      </a>
+                    </h2>
+                    <h3 class="font13">BY JOAN COOK AND ANNE P. DEPRINCE</h3>
+                  </div>
+                </li>
+                <li class="d-flex flex-row pt-2 ">
+                  <div class="img-g-small img-g-opinion img-path-opi-2 rounded-circle">
+                    <a href="#" class="link-img-opi"></a>
+                  </div>
+                  <div class="text-opinion-item pl-3 pb-sm-4 pb-md-4 pb-lg-1">
+                    <h2 class="font-roboto-17-bold-upper-black">
+                      <a href="#" class="links2">
+                        Dear Donna Rotunno: Your Reckless Words on Sexual Assault Hurt All of Us
+                      </a>
+                    </h2>
+                    <h3 class="font13">BY JOAN COOK AND ANNE P. DEPRINCE</h3>
+                  </div>
+                </li>
+                <li class="d-flex flex-row pt-2 ">
+                  <div class="img-g-small img-g-opinion img-path-opi-1 rounded-circle">
+                    <a href="#" class="link-img-opi"></a>
+                  </div>
+                  <div class="text-opinion-item pl-3 pb-sm-4 pb-md-4 pb-lg-1">
+                    <h2 class="font-roboto-17-bold-upper-black">
+                      <a href="#" class="links2">
+                        Dear Donna Rotunno: Your Reckless Words on Sexual Assault Hurt All of Us
+                      </a>
+                    </h2>
+                    <h3 class="font13">BY JOAN COOK AND ANNE P. DEPRINCE</h3>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-12 ">
+            <section class="latest-news pt-md-4">
+              <h2 class="font-roboto-16-bold-gray">LATEST NEWS</h2>
+            </section>
+            <ul class="latest-news-container p-0">
+              <li class="d-flex flex-row pb-lg-3 pb-md-2 pb-sm-2 pb-2">
+                <div class="w-lg-35 link-img-latest-news ">
+                  <a href="#">
+                    <img src="./img/joey-logano-pennzoil-400.jpg" alt="">
+                  </a>
+                </div>
+                <div class="w-lg-65 pl-2">
+                  <h1 class="font-roboto-17-bold-upper-black ">
+                    <a href="#" class="links2">
+                      Comedian Aboard Coronavirus Cruise Ship Fired After Ditching Quarantine
+                    </a>
+                  </h1>
+                </div>
+              </li>
+              <li class="d-flex flex-row pb-lg-3 pb-md-2 pb-sm-2 pb-2 pt-lg-3 pt-md-2 pt-sm-2 pt-2">
+                <div class="w-lg-35 link-img-latest-news ">
+                  <a href="#">
+                    <img src="./img/robert-obrien.jpg" alt="">
+                  </a>
+                </div>
+                <div class="w-lg-65 pl-2">
+                  <h1 class="font-roboto-17-bold-upper-black ">
+                    <a href="#" class="links2">
+                      Comedian Aboard Coronavirus Cruise Ship Fired After Ditching Quarantine
+                    </a>
+                  </h1>
+                </div>
+              </li>
+              <li class="d-flex flex-row pb-lg-3 pb-md-2 pb-sm-2 pb-2 pt-lg-3 pt-md-2  pt-sm-2 pt-2">
+                <div class="w-lg-35 link-img-latest-news ">
+                  <a href="#">
+                    <img src="./img/adam-schiff.jpg" alt="">
+                  </a>
+                </div>
+                <div class="w-lg-65 pl-2">
+                  <h1 class="font-roboto-17-bold-upper-black ">
+                    <a href="#" class="links2">
+                      Comedian Aboard Coronavirus Cruise Ship Fired After Ditching Quarantine
+                    </a>
+                  </h1>
+                </div>
+              </li>
+              <li class="d-flex flex-row pb-lg-3 pb-md-2 pb-sm-2 pb-2 pt-lg-3 pt-md-2 pt-sm-2 pt-2">
+                <div class="w-lg-35 link-img-latest-news ">
+                  <a href="#">
+                    <img src="./img/robert-obrien.jpg" alt="">
+                  </a>
+                </div>
+                <div class="w-lg-65 pl-2">
+                  <h1 class="font-roboto-17-bold-upper-black ">
+                    <a href="#" class="links2">
+                      Comedian Aboard Coronavirus Cruise Ship Fired After Ditching Quarantine
+                    </a>
+                  </h1>
+                </div>
+              </li>
+              <li class="d-flex flex-row pb-lg-3 pb-md-2 pb-sm-2 pb-2 pt-lg-3 pt-md-2 pt-sm-2 pt-2">
+                <div class="w-lg-35 link-img-latest-news ">
+                  <a href="#">
+                    <img src="./img/robert-obrien.jpg" alt="">
+                  </a>
+                </div>
+                <div class="w-lg-65 pl-2">
+                  <h1 class="font-roboto-17-bold-upper-black ">
+                    <a href="#" class="links2">
+                      Comedian Aboard Coronavirus Cruise Ship Fired After Ditching Quarantine
+                    </a>
+                  </h1>
+                </div>
+              </li>
+              <li class="d-flex flex-row pb-lg-3 pb-md-2 pb-sm-2 pb-2 pt-lg-3 pt-md-2 pt-sm-2 pt-2">
+                <div class="w-lg-35 link-img-latest-news ">
+                  <a href="#">
+                    <img src="./img/robert-obrien.jpg" alt="">
+                  </a>
+                </div>
+                <div class="w-lg-65 pl-2">
+                  <h1 class="font-roboto-17-bold-upper-black ">
+                    <a href="#" class="links2">
+                      Comedian Aboard Coronavirus Cruise Ship Fired After Ditching Quarantine
+                    </a>
+                  </h1>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 d-md-flex flex-md-column align-items-md-center">
+            <article class="d-flex flex-column align-items-start sponsor-article-s-opinion mt-4 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3 px-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover" src="./img/wayne-state-university-college-nursing.jpg"
+                    alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-blue  position-absolute text-center label-sponsor-link label-article-link-feat  px-3">
+                  SPONSORED
+                  INSIGHT</a>
+              </div>
+              <p class="order-3 font-helvetica-15-normal-gray px-3">We’re used to doctors bustling in and out when in
+                hospital, but it’s the reassuring presence and professionalism of the nursing staff that we rely on.
+                What sets the best ones apart?</p>
+            </article>
+            <article class="d-flex flex-column align-items-start sponsor-article-s-opinion mt-4 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3 px-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover" src="./img/wayne-state-university-college-nursing.jpg"
+                    alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-blue  position-absolute text-center label-sponsor-link label-article-link-feat  px-3">
+                  SPONSORED
+                  INSIGHT</a>
+              </div>
+              <p class="order-3 font-helvetica-15-normal-gray  px-3">We’re used to doctors bustling in and out when in
+                hospital, but it’s the reassuring presence and professionalism of the nursing staff that we rely on.
+                What sets the best ones apart?</p>
+            </article>
+            <article class="d-flex flex-column align-items-start sponsor-article-s-opinion mt-4 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3 px-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover" src="./img/wayne-state-university-college-nursing.jpg"
+                    alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-blue  position-absolute text-center label-sponsor-link label-article-link-feat  px-3">
+                  SPONSORED
+                  INSIGHT</a>
+              </div>
+              <p class="order-3 font-helvetica-15-normal-gray  px-3">We’re used to doctors bustling in and out when in
+                hospital, but it’s the reassuring presence and professionalism of the nursing staff that we rely on.
+                What sets the best ones apart?</p>
+            </article>
+            <article class="d-flex flex-column align-items-start sponsor-article-s-opinion mt-4 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3 px-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover" src="./img/wayne-state-university-college-nursing.jpg"
+                    alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-blue  position-absolute text-center label-sponsor-link label-article-link-feat  px-3">
+                  SPONSORED
+                  INSIGHT</a>
+              </div>
+              <p class="order-3 font-helvetica-15-normal-gray  px-3">We’re used to doctors bustling in and out when in
+                hospital, but it’s the reassuring presence and professionalism of the nursing staff that we rely on.
+                What sets the best ones apart?</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid max-width-cont-white">
+
+    <div class="row">
+
+      <div class="col-12 col-md-3 ">
+        <div class="row">
+          <div class="col-12 d-flex flex-column align-items-center pt-4">
+            <div class="card rounded-0 border-0 ">
+              <img class="card-img-top " src="./img/february-21-28-2020-cover.jpg" alt="Card image cap"
+                style="min-height: 220px;">
+              <div class="card-body p-0">
+                <h1 class="font-roboto-18-bold w-100 pt-0 ">
+                  <a href="#" class="font-roboto-16-bold-orange issue-newsletter position-absolute pl-2 pr-2">
+                    FEBRUARY 28 ISSUE </a>
+                  <a href="#" class="links3 text-see-all-fea py-2">See all features
+                    <svg version="1.1" id="Layer_997" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8 14"
+                      style="enable-background:new 0 0 8 14;" xml:space="preserve">
+                      <g id="arrow-right_x">
+                        <defs>
+                          <rect id="SVGID_1_X" width="8" height="14"></rect>
+                        </defs>
+                        <clipPath id="SVGID_2_X">
+                          <use xlink:href="#SVGID_1_" style="overflow:visible;"></use>
+                        </clipPath>
+                        <g id="Shape_1_999" class="st0">
+                          <g>
+                            <polygon class="st1" points="8,7 1.1,0 0,1.1 5.9,7 0,12.9 1.1,14 8,7 8,7	"></polygon>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-9">
+        <div class="row pr-2">
+          <div class="col-12 col-md-12 d-flex flex-row justify-content-center border-bottom pt-2 pb-2">
+            <span class="icon-title mr-2"></span>
+            <h1 class="font-roboto-18-bold ">in the magazine</h1>
+
+          </div>
+          <div class="col-12 col-md-4 p-2 ">
+            <div class="card rounded-0 border-0 ">
+              <img class="card-img-top pb-4 " src="./img/fea-growth-01.webp" alt="Card image cap"
+                style="min-height: 220px;">
+              <div class="card-body p-0">
+                <div class="d-flex flex-row">
+                  <h3 class="font-roboto-16-bold label-magz-cover px-3">Periscope</h3>
+                  <a href="#" class="font-roboto-16-bold-orange pl-2">Politics</a>
+                </div>
+                <h2 class="font-roboto-20-bold links1 order-3">Reagan Is Beating Obama in the Race To Name Things After
+                  Former Presidents</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 p-2">
+            <div class="card rounded-0 border-0 ">
+              <img class="card-img-top pb-4 " src="./img/fea-growth-01.webp" alt="Card image cap"
+                style="min-height: 220px;">
+              <div class="card-body p-0">
+                <div class="d-flex flex-row">
+                  <h3 class="font-roboto-16-bold label-magz-cover px-3">Periscope</h3>
+                  <a href="#" class="font-roboto-16-bold-orange pl-2">Politics</a>
+                </div>
+                <h2 class="font-roboto-20-bold links1 order-3">Reagan Is Beating Obama in the Race To Name Things After
+                  Former Presidents</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 p-2">
+            <div class="card rounded-0 border-0 ">
+              <img class="card-img-top pb-4 " src="./img/fea-growth-01.webp" alt="Card image cap"
+                style="min-height: 220px;">
+              <div class="card-body p-0">
+                <div class="d-flex flex-row">
+                  <h3 class="font-roboto-16-bold label-magz-cover px-3">Periscope</h3>
+                  <a href="#" class="font-roboto-16-bold-orange pl-2">Politics</a>
+                </div>
+                <h2 class="font-roboto-20-bold links1 order-3">Reagan Is Beating Obama in the Race To Name Things After
+                  Former Presidents</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 ">
+        <div class="row">
+          <div class="col-12 p-2">
+            <div class="card rounded-0 border-0 ">
+              <img class="card-img-top pb-4 " src="./img/fea-growth-01.webp" alt="Card image cap"
+                style="min-height: 220px;">
+              <div class="card-body p-0">
+                <div class="d-flex flex-row">
+                  <h3 class="font-roboto-16-bold label-magz-cover px-3">Periscope</h3>
+                  <a href="#" class="font-roboto-16-bold-orange pl-2">Politics</a>
+                </div>
+                <h2 class="font-roboto-20-bold links1 order-3">Reagan Is Beating Obama in the Race To Name Things After
+                  Former Presidents</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-9">
+        <div class="row pr-2">
+          <div class="col-12 col-md-4 p-2">
+            <div class="card rounded-0 border-0 ">
+              <img class="card-img-top pb-4 " src="./img/fea-growth-01.webp" alt="Card image cap"
+                style="min-height: 220px;">
+              <div class="card-body p-0">
+                <div class="d-flex flex-row">
+                  <h3 class="font-roboto-16-bold label-magz-cover px-3">Periscope</h3>
+                  <a href="#" class="font-roboto-16-bold-orange pl-2">Politics</a>
+                </div>
+                <h2 class="font-roboto-20-bold links1 order-3">Reagan Is Beating Obama in the Race To Name Things After
+                  Former Presidents</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 p-2">
+            <div class="card rounded-0 border-0 ">
+              <img class="card-img-top pb-4 " src="./img/fea-growth-01.webp" alt="Card image cap"
+                style="min-height: 220px;">
+              <div class="card-body p-0">
+                <div class="d-flex flex-row">
+                  <h3 class="font-roboto-16-bold label-magz-cover px-3">Periscope</h3>
+                  <a href="#" class="font-roboto-16-bold-orange pl-2">Politics</a>
+                </div>
+                <h2 class="font-roboto-20-bold links1 order-3">Reagan Is Beating Obama in the Race To Name Things After
+                  Former Presidents</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 p-2">
+            <div class="card rounded-0 border-0 ">
+              <img class="card-img-top pb-4 " src="./img/fea-growth-01.webp" alt="Card image cap"
+                style="min-height: 220px;">
+              <div class="card-body p-0">
+                <div class="d-flex flex-row">
+                  <h3 class="font-roboto-16-bold label-magz-cover px-3">Periscope</h3>
+                  <a href="#" class="font-roboto-16-bold-orange pl-2">Politics</a>
+                </div>
+                <h2 class="font-roboto-20-bold links1 order-3">Reagan Is Beating Obama in the Race To Name Things After
+                  Former Presidents</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid max-width-cont-white">
+    <header class="row title-section-1">
+      <div class="col-12 col-md-12 d-flex flex-row justify-content-center border-botton-title-1 py-3 ">
+        <span class="icon-title mr-2"></span>
+        <h1 class="font-roboto-18-bold link-in-mgz">
+          FEATURED SLIDESHOWS</h1>
+      </div>
+    </header>
+    <div class="row pt-3">
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-upper-white  position-absolute label-article-link label-article-link-slide text-center">
+                  <img class="img-g-feat-slide" src="./img/icon-slideshows-nw.png" alt="">
+                  <span class="counter-editor-label position-absolute">11</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-upper-white  position-absolute label-article-link label-article-link-slide text-center">
+                  <img class="img-g-feat-slide" src="./img/icon-slideshows-nw.png" alt="">
+                  <span class="counter-editor-label position-absolute">11</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-upper-white  position-absolute label-article-link label-article-link-slide text-center">
+                  <img class="img-g-feat-slide" src="./img/icon-slideshows-nw.png" alt="">
+                  <span class="counter-editor-label position-absolute">11</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-upper-white  position-absolute label-article-link label-article-link-slide text-center">
+                  <img class="img-g-feat-slide" src="./img/icon-slideshows-nw.png" alt="">
+                  <span class="counter-editor-label position-absolute">11</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-upper-white  position-absolute label-article-link label-article-link-slide text-center">
+                  <img class="img-g-feat-slide" src="./img/icon-slideshows-nw.png" alt="">
+                  <span class="counter-editor-label position-absolute">11</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+                <a href="#"
+                  class="font-roboto-17-bold-upper-white  position-absolute label-article-link label-article-link-slide text-center">
+                  <img class="img-g-feat-slide" src="./img/icon-slideshows-nw.png" alt="">
+                  <span class="counter-editor-label position-absolute">11</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid max-width-cont-white pt-4">
+    <header class="row title-section-1">
+      <div class="col-12 col-md-12 d-flex flex-row justify-content-start border-top-title-1 py-4">
+        <h1 class="font-roboto-22-bold-orange link-in-mgz">
+          World</h1>
+      </div>
+    </header>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex flex-column">
+              <ul class="other-news-small pl-0">
+                <li class="pt-4">
+                  <article class="row no-gutters">
+                    <div class="col-md-12">
+                      <div class=" float-left pr-3 pb-4">
+                        <a href="#" class="other-news-small-link-container">
+                          <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                        </a>
+                      </div>
+                      <h2 class="font-roboto-17-bold-upper-black ">
+                        <a href="#" class="links1">
+                          Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                        </a>
+                      </h2>                      
+                    </div>
+                  </article>
+                </li>
+                <li class=" pt-2 pb-2">
+                  <article class="row no-gutters">
+                    <div class="col-md-12">
+                      <div class=" float-left pr-3 pb-4">
+                        <a href="#" class="other-news-small-link-container">
+                          <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                        </a>
+                      </div>
+                      <h2 class="font-roboto-17-bold-upper-black ">
+                        <a href="#" class="links1">
+                          Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                        </a>
+                      </h2>                      
+                    </div>
+                  </article>
+                </li>
+                <li class="pt-2 ">
+                  <article class="row no-gutters">
+                    <div class="col-md-12">
+                      <div class=" float-left pr-3 pb-4">
+                        <a href="#" class="other-news-small-link-container">
+                          <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                        </a>
+                      </div>
+                      <h2 class="font-roboto-17-bold-upper-black ">
+                        <a href="#" class="links1">
+                          Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                        </a>
+                      </h2>                      
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid max-width-cont-white pt-4 pb-4">
+    <header class="row title-section-1 ">
+      <div class="col-12 col-md-12 d-flex flex-row justify-content-start border-top-title-1 pt-4 pb-3">
+        <h1 class="font-roboto-22-bold-orange link-in-mgz">
+          Tech & Science</h1>
+      </div>
+    </header>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="col-12">
+            <article class="d-flex flex-column align-items-start pb-2 ">
+              <h2 class="order-2 font-roboto-24-bold pt-3">
+                <a href="#" class="links1">
+                  New Coronavirus Treatments Trialed as WHO Warns Against Self-Medicating
+                </a>
+              </h2>
+              <div class="order-1 cover-container-art">
+                <a href="#"><img class="img-g-fea-cover"
+                    src="./img/coronavirus-tokyo-coronavirus-covid-19-2019-ncov.jpg" alt=""></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex flex-column">
+              <ul class="other-news-small pl-0">
+                <li class="pt-4">
+                  <article class="row no-gutters">
+                    <div class="col-md-12">
+                      <div class=" float-left pr-3 pb-4">
+                        <a href="#" class="other-news-small-link-container">
+                          <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                        </a>
+                      </div>
+                      <h2 class="font-roboto-17-bold-upper-black ">
+                        <a href="#" class="links1">
+                          Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                        </a>
+                      </h2>                      
+                    </div>
+                  </article>
+                </li>
+                <li class=" pt-2 pb-2">
+                  <article class="row no-gutters">
+                    <div class="col-md-12">
+                      <div class=" float-left pr-3 pb-4">
+                        <a href="#" class="other-news-small-link-container">
+                          <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                        </a>
+                      </div>
+                      <h2 class="font-roboto-17-bold-upper-black ">
+                        <a href="#" class="links1">
+                          Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                        </a>
+                      </h2>                      
+                    </div>
+                  </article>
+                </li>
+                <li class="pt-2 ">
+                  <article class="row no-gutters">
+                    <div class="col-md-12">
+                      <div class=" float-left pr-3 pb-4">
+                        <a href="#" class="other-news-small-link-container">
+                          <img src="./img/bernie-sanders-primary-victories-candidate.jpg" alt="">
+                        </a>
+                      </div>
+                      <h2 class="font-roboto-17-bold-upper-black ">
+                        <a href="#" class="links1">
+                          Barr Threatens to Quit Over Trump Tweets About DOJ Investigations: Report
+                        </a>
+                      </h2>                      
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid max-width-cont-white mt-1">
+    <div class="row pl-3 pr-3">
+      <div class="col-12 col-md-12 col-lg-8 pt-4">
+        <article class="suscribe-container">
+          <header>
+            <h2 class="font-roboto-16-bold-orange">Suscribe</h2>
+          </header>
+          <div
+            class="d-flex flex-md-row flex-column flex-sm-column align-items-sm-center suscribe-container-child align-items-md-center">
+            <div class="cascade-images position-relative w-50">
+              <img class="img-suscribe-1 position-absolute" src="./img/february-14-2020-cover.jpg" alt="">
+              <img class="img-suscribe-2 position-absolute" src="./img/february-21-28-2020-cover-2-2.jpg" alt="">
+            </div>
+            <div class="text-center text-md-left" >
+              <h2 class="font-roboto-24-bold pr-3 pb-3 ">In-depth Stories You Don't See Elsewhere About Topics You Want
+                to
+                Read!</h2>
+              <p class="font-helvetica-15-normal-gray pr-3 pb-3">All Access + Weekly Delivery. Choose A Membership
+                That's
+                Perfect for You!</p>
+              <a href="#" class="font2 link-suscribe-nl px-4 py-2">Subscribe<img class="bg-suscribe-nl ml-2 mt-n1"
+                  src="./img/icon-arrow-right.svg" alt=""></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4 pt-4 pb-5">
+        <article class="singup-container">
+          <header>
+            <h2 class="font-roboto-16-bold-orange ">Newsletter</h2>
+          </header>
+          <div
+            class="d-flex flex-md-row  flex-column flex-sm-column align-items-sm-center align-items-stretch newsletter-article">
+            <div class="col-sm-12 col-md-3 col-lg-6 img-g img-g-newsletter img-path-newslet-1 ">
+            </div>
+            <div class="col-sm-12 col-md-9 col-lg-6 pt-4 left-container-newsletter text-center text-sm-center text-md-left text-lg-left">
+              <h2 class="font-roboto-24-bold">The Starting 5</h2>
+              <p class="font-helvetica-15-normal-gray">Take back your inbox. Sign up for our newsletter and start making
+                sense of the world around you.</p>
+              <a href="#" class="font2 link-suscribe-nl px-4 py-2">Sign Up<img class="bg-suscribe-nl ml-2 mt-n1"
+                  src="./img/icon-arrow-right.svg" alt=""></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid max-width-cont-white">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <div class="row d-flex flex-row container-media-footer align-items-md-end align-items-lg-end">
+          <div class="col-12 col-md-4 col-lg-3 logo-footer pl-0 py-3">
+            <svg version="1.1" id="Layer_1_99999" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60"
+              style="enable-background:new 0 0 395.6 60;" xml:space="preserve">
+              <g>
+                <path class="st0"
+                  d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+                </path>
+              </g>
+            </svg>
+          </div>
+          <div class="col-12 col-md-4 col-lg-6  Copyright">
+            <span class="font-helvetica-12-normal-gray newsweek pb-2"> © 2020 NEWSWEEK</span>
+          </div>
+          <div
+            class="col-12 col-md-4 col-lg-3 d-flex flex-row icons-container flex-lg-row  flex-md-row justify-content-md-end justify-content-lg-end">
+            <img class="icon-social ml-3 mb-2" src="./img/facebook-square-brands.svg" alt="">
+            <img class="icon-social ml-3 mb-2" src="./img/twitter-brands.svg" alt="">
+            <img class="icon-social ml-3 mb-2" src="./img/instagram-brands.svg" alt="">
+            <img class="icon-social ml-3 mb-2" src="./img/tumblr-brands.svg" alt="">
+            <img class="icon-social ml-3 mb-2" src="./img/linkedin-in-brands.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 d-flex flex-column">
+        <ul class="font-helvetica-14-normal-gray pl-1 pl-md-4 pl-lg-3">
+          <li class="d-inline font-weight-bold pr-2">Editions</li>
+          <li class="d-inline border-right pr-2 pl-2">U.S. edition</li>
+          <li class="d-inline border-right pr-2 pl-2">French</li>
+          <li class="d-inline border-right pr-2 pl-2">Pakistan</li>
+          <li class="d-inline border-right pr-2 pl-2">Polska</li>
+          <li class="d-inline">România</li>
+        </ul>
+        <ul class="font-helvetica-14-normal-gray pb-3 pl-1 pl-md-4 pl-lg-3 ">
+          <li class="d-inline border-right pr-2">About us</li>
+          <li class="d-inline border-right pr-2 pl-2">Corrections</li>
+          <li class="d-inline border-right pr-2 pl-2">Contact Us</li>
+          <li class="d-inline border-right pr-2 pl-2">Editorial Guidelines</li>
+          <li class="d-inline border-right pr-2 pl-2">Advertise</li>
+          <li class="d-inline border-right pr-2 pl-2">Copyright</li>
+          <li class="d-inline border-right pr-2 pl-2">Terms & Conditions</li>
+          <li class="d-inline border-right pr-2 pl-2">Privacy Policy</li>
+          <li class="d-inline border-right pr-2 pl-2">Cookie Policy</li>
+          <li class="d-inline border-right pr-2 pl-2">Terms of Sale</li>
+          <li class="d-inline border-right pr-2 pl-2">Terms of Sale</li>
+          <li class="d-inline border-right pr-2 pl-2">Archive</li>
+          <li class="d-inline border-right pr-2 pl-2">Announcements</li>
+          <li class="d-inline">Consent preferences</li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./css/jquery-3.4.1.slim.min.js"></script>
+  <script src="./css/popper.min.js"></script>
+  <script src="./css/bootstrap.min.js"></script>
+  <script src="./menu-animation.js"></script>
 </body>
+
 </html>
