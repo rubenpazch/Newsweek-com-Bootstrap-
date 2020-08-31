@@ -37,8 +37,7 @@
     <a href="https://happy-stonebraker-bc9837.netlify.app/">View Demo</a>   &#10023;  
     <a href="https://github.com/rubenpazch/Newsweek-com-Bootstrap-/issues">Report Bug</a>    &#10023;
     <a href="#Getting-Started">Getting Started</a> &#10023; <a href="#Install">Installing</a> &#10023;        
-    <a href="#Whats-is-included-on-this-project">Whats is included on this project</a> &#10023;        
-    <a href="#Video-Presentation-of-the-project">Video Presentation of the project</a> &#10023;
+    <a href="#Whats-is-included-on-this-project">Whats is included on this project</a> &#10023;      
     <a href="#Authors">Author</a> &#10023;
      
      
@@ -51,27 +50,122 @@
 <br/>
 
 
-Newsweek.com is a news website, for this project I did clone the full website using HTML, CSS, and Bootstrap, the website has many sections like feature stories, opinion, more histories, culture and travel, top stories, ads section,  latest news, in the magazine, tech & science, footer, all this section have a specific behavior depending on the device. This is a responsive site ready to use in Mobile, Laptop, or Tablet. Finally, I have to mention that to build this project it was used the best programming practices relative to front end development. 
+Newsweek.com is a news website for this project I did clone the full website using HTML, CSS, and Bootstrap, the website has many sections like feature stories, opinion, more histories, culture and travel, top stories, ads section,  latest news, in the magazine, tech & science, footer, all this section have a specific behavior depending on the device. This is a responsive site ready to use in Mobile, Laptop, or Tablet. Finally, I have to mention that to build this project it was used the best programming practices relative to front end development. 
+
+<br/>
+
+<img src="./img/newsweekgif.gif" width="100%"/>
+
+<br/>
 
 
 
-## Built With
+
+
+## Getting Started
+
+This project was built using HTML, CSS, Bootstrap, Flexbox, Javascript, it is a web application and for running on your local environment you should follow these guidelines.
+
+
+### Prerequisites
+
+- FontAwesome
+
+### Built With
+
+Concepts used on this project
 
 - HTML
 - CSS
-- Bootstrap 4  
+- Bootstrap
+- Javascript
+- Font-awesome
 
-## Live Demo
 
-[Preview](https://happy-stonebraker-bc9837.netlify.com/)
+
+### Setup
+
+The project repository can be found in [GitHub link](https://github.com/rubenpazch/Newsweek-com-Bootstrap-) or just clone the project using this command. 
+
+
+
+```
+Using SSH 
+
+# git clone  git@github.com:rubenpazch/Newsweek-com-Bootstrap-.git
+
+Using HTTPS
+
+# git clone  https://github.com/rubenpazch/Newsweek-com-Bootstrap-.git
+
+```
+
++ Open terminal on your workspace with
+
+```
+cd /home/workspace/Newsweek-com-Bootstrap-
+```
+
+
+## Install
+
+
+To get started with the app, clone the repo, and to change the css style file located on css folder
+
+
+### Usage
+
+To watch the local version of this project check on your browser the  index file
+
+
+
+### Tools used on this project
+
+- Stickler CI
+- Visual Studio Code
+- CSS Formatter
+- Stylelint
+
+
+
+
+## Whats is included on this project
+
+This project includes the next parts:
+
++ The home page
+  + Navigation bar
+  + Menu
+  + Featured stories
+  + Top stories
+  + Opinion
+  + Culture and Travel
+  + Latest News
+  + Ads section
+  + MOre stories
+  + Magazine
+  + Featured slideshows
+  + Suscribe
+  + Footer
+
+
+### Link to assignment
+
+the assignment can be found  [here](https://www.theodinproject.com/courses/html5-and-css3/lessons/using-bootstrap).
+
+
+
 
 
 ## Authors
 
 👤 **Ruben Paz Chuspe**
 
+
 - Github: [@rubenpazch](https://github.com/rubenpazch)
 - Linkedin: [rubenpch](https://www.linkedin.com/in/rubenpch/)
+- Twitter: [rubenpch](https://www.linkedin.com/in/rubenpch/)
+
 
 ## 🤝 Contributing
 
@@ -85,9 +179,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- The Odin Project   
+- Newsweeks.com
 
 ## 📝 License
 
