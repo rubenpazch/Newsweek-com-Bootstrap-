@@ -169,7 +169,7 @@ the assignment can be found  [here](https://www.theodinproject.com/courses/html5
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+This project was created for educational purposes as part of the Microverse web development curriculum; contributing is not accepted.
 
 Feel free to check the [issues page](issues/).
 
